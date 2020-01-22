@@ -45,19 +45,22 @@ public class OperadorAritmeticoTest {
 	}
 
 	@Test
-	public void testDivisionCero() {
-		
-	
+	public void divisionPorCero() {
 		int a = 8;
 		int b = 0;
 		int division;
 		try {
-			 division = OperadorAritmetico.division(a, b);
-			 fail("Deberia haber entrado al catch ");
-			} catch (Exception e) {
-				assertTrue(true);
-			
-			}
+			division = OperadorAritmetico.division(a, b);
+			fail("Debería haber entrado al catch");
+		} catch (Exception e) {
+			assertTrue(true);
 		}
+	}
+	
+	@Test
+	public void testConstructor() {
+	  new OperadorAritmetico();
+	  assertTrue(true);
+	}
 	
 }
